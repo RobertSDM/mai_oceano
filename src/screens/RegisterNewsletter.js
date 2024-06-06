@@ -7,10 +7,16 @@ const RegisterNewsletter = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <SafeAreaView>
-      <Text>Registro Newsletter</Text>
-      <TextInput placeholder="Email" onChangeText={setEmail}/>
-      <Button title="Assinar" onPress={() => saveEmailToNewsletter(email)} />
+    <SafeAreaView className="h-full flex items-center justify-center">
+      <View className="flex gap-y-10">
+        <Text className="text-2xl">Registro Newsletter</Text>
+        <TextInput
+          placeholder="Email"
+          className="px-4 py-2 border"
+          onChangeText={setEmail}
+        />
+        <Button title="Assinar" onPress={() => saveEmailToNewsletter(email)} />
+      </View>
     </SafeAreaView>
   );
 };
