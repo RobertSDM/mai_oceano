@@ -1,6 +1,9 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AboutProject from "../screens/AboutProject";
-import { View } from "react-native";
+import Navbar from "../components/Navbar"
+import AboutRobot from "../screens/AboutRobot"
+import Images from "../screens/Images"
+import RegisterDonor from "../screens/RegisterDonor"
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -13,7 +16,11 @@ const MainLayout = () => {
                 }}
             >
                 <Screen name="AboutProj" component={AboutProject} />
+                <Screen name="AboutRobot" component={AboutRobot} />
+                <Screen name="Images" component={Images} />
+                <Screen name="RegDonor" component={RegisterDonor} />
             </Navigator>
+            <Navbar/>
         </>
     );
 };
