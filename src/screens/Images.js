@@ -1,29 +1,37 @@
-import { Text, View } from "react-native";
-import { Image } from "react-native-web";
+import { ScrollView, Text, View, Image } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Footer from "../components/Footer";
 
 const Images = () => {
-    return (
-      <>
-        <View>
-          <Text></Text>
-          <Image />
+  return (
+    <ScrollView className="h-full border px-4">
+      <SafeAreaView className="space-y-10 h-full py-10">
+        <Text className="text-2xl text-black font-semibold">Imagens</Text>
+        <View className="space-y-4">
+          <Image
+            className="object-contain h-52 aspect-video mx-auto"
+            source={require("../../assets/ocean-robot-photo-01.jpg")}
+          />
+          <Image
+            className="object-contain h-52 aspect-video mx-auto"
+            source={require("../../assets/ocean-robot-photo-02.jpg")}
+          />
+          <Image
+            className="object-contain h-52 aspect-video mx-auto"
+            source={require("../../assets/ocean-robot-photo-02.jpg")}
+          />
+          <Image
+            className="object-contain h-52 aspect-video mx-auto"
+            source={require("../../assets/ocean-robot-photo-02.jpg")}
+          />
+          <Image
+            className="object-contain h-52 aspect-video mx-auto"
+            source={require("../../assets/ocean-robot-photo-02.jpg")}
+          />
         </View>
-        <View>
-          <View>
-            <Image />
-            <Text></Text>
-          </View>
-          <View>
-            <Image />
-            <Text></Text>
-          </View>
-          <View>
-            <Image />
-            <Text></Text>
-          </View>
-        </View>
-      </>
-    );
-}
+      </SafeAreaView>
+    </ScrollView>
+  );
+};
 
-export default Images
+export default Images;
