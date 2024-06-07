@@ -1,11 +1,16 @@
+import createSubcriber from "../connection/createSubscriber";
 import showScreenMessage from "./showScreenMessage";
 
 const saveEmailToNewsletter = (email) => {
-  if (email !== "") {
-    // fetch thing
-  } else {
+  if (email === "") {
     showScreenMessage("O email não pode estar vazio");
     return;
+  } else {
+    createSubcriber({
+      email,
+    }).then((res) => {
+      return res
+    });
   }
 };
 

@@ -1,4 +1,3 @@
-import { Link } from "@react-navigation/native";
 import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CallToNewsletter from "../components/CallToNewsletter";

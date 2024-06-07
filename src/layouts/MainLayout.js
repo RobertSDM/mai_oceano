@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import AboutRobot from "../screens/AboutRobot";
 import Images from "../screens/Images";
 import RegisterNewsletter from "../screens/RegisterNewsletter";
-import Footer from "../components/Footer";
 
 const { Navigator, Screen } = createNativeStackNavigator();
 

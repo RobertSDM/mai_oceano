@@ -1,6 +1,5 @@
 import { ScrollView, Text, View, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Footer from "../components/Footer";
 
 const Images = () => {
   return (
