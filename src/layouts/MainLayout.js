@@ -15,10 +15,10 @@ const MainLayout = () => {
           headerShown: false,
         }}
       >
-        <Screen name="RegNewsletter" component={RegisterNewsletter} />
         <Screen name="AboutProj" component={AboutProject} />
         <Screen name="AboutRobot" component={AboutRobot} />
         <Screen name="Images" component={Images} />
+        <Screen name="RegNewsletter" component={RegisterNewsletter} />
       </Navigator>
       <Navbar />
     </>
