@@ -3,9 +3,12 @@ import { View, Text, Button, TextInput } from "react-native";
 import saveEmailToNewsletter from "../controller/saveEmailToNewsletter";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../components/CustomButton";
+import updateSubscriberEmail from "../controller/updateSubscriberEmail";
+import deleteSubscriberEmail from "../controller/deleteSubscriberEmail";
 
 const RegisterNewsletter = () => {
   const [email, setEmail] = useState("");
+  const [newEmail, setNewEmail] = useState("");
   const [showMoreOptions, setShowMoreOptions] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
@@ -19,7 +22,7 @@ const RegisterNewsletter = () => {
           <View>
             <Text>Novo email</Text>
             <TextInput
-              placeholder="Email"
+              placeholder="Novo email"
               className="px-4 py-2 border"
               onChangeText={setEmail}
             />
@@ -29,15 +32,21 @@ const RegisterNewsletter = () => {
             <TextInput
               placeholder="Email"
               className="px-4 py-2 border"
-              onChangeText={setEmail}
+              onChangeText={setNewEmail}
             />
           </View>
           <View className="flex flex-row justify-between gap-x-10">
-            <CustomButton text="Atualizar" />
-            <CustomButton text="Deletar" />
+            <CustomButton
+              text="Atualizar"
+              onPress={() => updateSubscriberEmail(newEmail, email)}
+            />
+            <CustomButton
+              text="Deletar"
+              onPress={() => deleteSubscriberEmail(email)}
+            />
           </View>
           <CustomButton
-            text="Cancelar"
+            text="Voltar"
             onPress={() => setShowMoreOptions((prev) => !prev)}
           />
         </View>
@@ -54,9 +63,8 @@ const RegisterNewsletter = () => {
             onPress={() => {
               const res = saveEmailToNewsletter(email);
               console.log(res);
-              setShowButton(res)
+              setShowButton(res);
               console.log(showButton);
-
             }}
           />
           {showButton && (

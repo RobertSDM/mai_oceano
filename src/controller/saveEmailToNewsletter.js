@@ -9,10 +9,12 @@ const saveEmailToNewsletter = (email) => {
     const res = createSubcriber({
       email,
     }).then((res) => {
-      return res
+      return !res;
     });
 
-    return res
+    showScreenMessage("Email criado com sucesso");
+    
+    return res;
   }
 };
 
