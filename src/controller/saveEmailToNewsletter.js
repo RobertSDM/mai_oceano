@@ -6,11 +6,13 @@ const saveEmailToNewsletter = (email) => {
     showScreenMessage("O email não pode estar vazio");
     return;
   } else {
-    createSubcriber({
+    const res = createSubcriber({
       email,
     }).then((res) => {
       return res
     });
+
+    return res
   }
 };
 

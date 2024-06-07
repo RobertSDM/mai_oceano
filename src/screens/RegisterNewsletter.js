@@ -53,6 +53,7 @@ const RegisterNewsletter = () => {
             text="Assinar"
             onPress={() => {
               const res = saveEmailToNewsletter(email);
+              console.log(res);
               setShowButton(res)
               console.log(showButton);
 
